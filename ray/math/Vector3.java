@@ -174,5 +174,7 @@ public class Vector3 extends Tuple3 {
     this.z += scale * vector.z;
 
   }
-
+  public double getMagnitude() {
+	  return Math.sqrt(x*x + y*y + z*z);
+  }
 }

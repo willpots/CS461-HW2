@@ -76,8 +76,7 @@ public class Scene {
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn, boolean anyIntersection) {
 		
-		// TODO: fill in this function
-		// here are a few lines to get you started.
+
 		boolean ret = false;
 		IntersectionRecord tmp = new IntersectionRecord();
 		Ray ray = new Ray(rayIn.origin, rayIn.direction);
@@ -87,6 +86,10 @@ public class Scene {
 		for(Iterator<Surface> iter = surfaces.iterator(); iter.hasNext();) {
 			Surface s = iter.next();
 			
+			if(s.intersect(tmp, ray)==true) {
+				outRecord=tmp;
+				ret=true;
+			}
 			// now check for intersection (look in Surface class for appropriate method)
 			// and update ray start and/or end points
 			

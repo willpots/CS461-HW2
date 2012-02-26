@@ -110,8 +110,9 @@ public class RayTracer {
 				
 				// TODO: Compute the ray (look in Camera class)
 				// map x, y to "unit" coords in [0, 1]
-
-				
+				double u = x/width;
+				double v = y/height;
+				cam.getRay(ray, u, v);
 				
 				shadeRay(rayColor, scene, ray, scene.getLights(), 1, 1, false);
 				pixelColor.set(rayColor);
@@ -146,15 +147,26 @@ public class RayTracer {
 	public static void shadeRay(Color outColor, Scene scene, Ray ray,// Workspace workspace, 
 			ArrayList<Light> lights, int depth, double contribution, boolean internal) {
 		
+		
 		// Reset the output color
 		outColor.set(0, 0, 0);
 
 		IntersectionRecord eyeRecord = new IntersectionRecord();
 		Vector3 toEye = new Vector3();
 
+
+		if(scene.getFirstIntersection(eyeRecord, ray)==false) {
+			return;
+		} else {
+			
+		}
 		// TODO: Find the first intersection of "ray" with the scene.
 		// Record intersection in eyeRecord. If it doesn't hit anything, just return (exit function).
 		// Hint: look in the Scene class for appropriate methods
+
+		
+		// TODO: FIX FOR A CAMERA OTHER THAN 0,0,0
+		toEye.set(eyeRecord.location);
 		
 		
 		// TODO: Compute "toEye" from eyeRecord.
@@ -166,6 +178,7 @@ public class RayTracer {
 		// Hint: while developing and for debugging you might want to set outColor to some other colors, without using shaders. 
 		if (eyeRecord.surface != null)
 			eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
+
 	}
 
 }
