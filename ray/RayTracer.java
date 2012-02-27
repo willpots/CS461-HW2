@@ -110,13 +110,15 @@ public class RayTracer {
 				
 				// TODO: Compute the ray (look in Camera class)
 				// map x, y to "unit" coords in [0, 1]
-				double u = x/width;
-				double v = y/height;
-				cam.getRay(ray, u, v);
+				double u = (x+.5)/width;
+				double v = (y+.5)/height;
 				
+				
+				
+				cam.getRay(ray, u, v);
+				//System.out.println("Ray: "+ray.toString());
 				shadeRay(rayColor, scene, ray, scene.getLights(), 1, 1, false);
 				pixelColor.set(rayColor);
-				
 				//Gamma correct and clamp pixel values
 				pixelColor.gammaCorrect(2.2);
 				pixelColor.clamp(0, 1);
@@ -154,11 +156,26 @@ public class RayTracer {
 		IntersectionRecord eyeRecord = new IntersectionRecord();
 		Vector3 toEye = new Vector3();
 
-
+		//System.out.println(scene.getFirstIntersection(eyeRecord, ray));
+		//System.out.println(ray.toString());
 		if(scene.getFirstIntersection(eyeRecord, ray)==false) {
+			System.out.println("Not Intersected!");
+			outColor.set(1,0,0);
 			return;
 		} else {
+			//System.out.println(eyeRecord.toString());
+			toEye.set(eyeRecord.location);
 			
+			
+			// TODO: Compute "toEye" from eyeRecord.
+			// toEye is the ray from the hit position to the eye.
+			
+
+			if (eyeRecord.surface != null) {
+				outColor.set(.1,0,0);
+				eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
+			} else {
+			}
 		}
 		// TODO: Find the first intersection of "ray" with the scene.
 		// Record intersection in eyeRecord. If it doesn't hit anything, just return (exit function).
@@ -166,18 +183,6 @@ public class RayTracer {
 
 		
 		// TODO: FIX FOR A CAMERA OTHER THAN 0,0,0
-		toEye.set(eyeRecord.location);
-		
-		
-		// TODO: Compute "toEye" from eyeRecord.
-		// toEye is the ray from the hit position to the eye.
-		
-
-
-		// Compute color
-		// Hint: while developing and for debugging you might want to set outColor to some other colors, without using shaders. 
-		if (eyeRecord.surface != null)
-			eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
 
 	}
 

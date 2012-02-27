@@ -33,38 +33,47 @@ public class Sphere extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		// TODO: fill in this function.
-		// compute ray-sphere intersection
 
-		// 
-		Point3 o = new Point3();
-		o.set(rayIn.origin);
-		Vector3 d = rayIn.direction;
+
+		Point3 o = new Point3(rayIn.origin);
+		Vector3 d = new Vector3(rayIn.direction);
+		
+		//System.out.println(d);
 		Point3 c = center;
+		//System.out.println(c);
 		Vector3 oc = new Vector3();
-		oc.sub(o, c);
-		
-		
-		
+		oc.sub(o, c);	
+		//System.out.println(radius);
 		double A = d.dot(d);
+		//System.out.println(A);
 		double C = oc.dot(oc) - Math.pow(radius, 2);
-		oc.scale(2);
+		d.scale(2);
 		double B = d.dot(oc);
-		
-		
-		if(Math.pow(B, 2)-(4*A*C)<0) {
+		double discriminant = (Math.pow(B, 2)-(4*A*C));
+		//System.out.print("D: "+d+" A: "+A+" B: "+B+" C: "+C+" ");
+		//System.out.print(discriminant+"  ");
+		//System.out.println(rayIn.toString());
+		if(discriminant<0.0) {
+			//System.out.println("Returning false!\n\n");
 			return false;
 		} else {
+			d = new Vector3(rayIn.direction);
+			double t0 = ((-1*B) + Math.sqrt(discriminant))/(2*A);
+			double t1 = ((-1*B) - Math.sqrt(discriminant))/(2*A);
 			double t;
-			if(B<0) {
-				t = ((-1*B) + Math.sqrt(Math.pow(B, 2)-(4*A*C)))/(2*A);
-			} else {
-				t = ((-1*B) - Math.sqrt(Math.pow(B, 2)-(4*A*C)))/(2*A);
-			}
-			d = rayIn.direction;
+			if(t0<0) t=t1;
+			else if(t1<0) t=t0;	
+			else if(t1>t0) t=t0;
+			else if(t1<t0) t=t1;
+			else return false;
 			d.scale(t);
-			outRecord.location.set(d);
+
+			outRecord.location.set(new Point3(d.x,d.y,d.z));
 			outRecord.surface = this;
+			outRecord.t=t;
+
+			rayIn.start=0;
+			rayIn.end=t;
 
 			return true;
 		}

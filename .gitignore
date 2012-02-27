@@ -4,3 +4,6 @@ TEST1/one-sphere.xml.png
 TEST1/two-boxes.xml.png
 TEST1/four-spheres.xml.png
 *.class
+ray/Camera.class
+ray/Camera.class
+ray/IntersectionRecord.class

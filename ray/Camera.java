@@ -1,4 +1,3 @@
-//TEST by dan
 package ray;
 
 import ray.math.Point3;
@@ -57,6 +56,7 @@ public class Camera {
 		// TODO: fill in this function. 
 		// set basis vectors according to projection normal and up direction
 		basisW.set(projNormal);
+		
 		Vector3 temp = new Vector3();
 		temp.set(projNormal);
 		if(Math.abs(temp.x)<Math.abs(temp.y)) {
@@ -75,8 +75,8 @@ public class Camera {
 
 		basisU.cross(temp,basisW);
 		basisU.scale(1/basisU.getMagnitude());
-		basisV.cross(basisW, temp); 
-
+		basisV.cross(basisW, basisU); 
+		System.out.println(basisU.getMagnitude());
 		initialized = true;
 	}
 	
@@ -92,25 +92,34 @@ public class Camera {
 		// TODO: fill in this function.
 		// map u coord from [0,1] to [-viewWidth/2, viewWidth/2], similarly for v
 		// then set the output ray, including its start and end points (hint: use Double.POSITIVE_INFINITY)
-		double u = inU;
-		double v = inV;
+		//System.out.println("["+inU+","+inV+"]");
 		Vector3 U = new Vector3();
 		U.set(basisU);
 		Vector3 V = new Vector3();
 		V.set(basisV);
+		
 		Vector3 W = new Vector3();
 		W.set(basisW);
-		u *= viewWidth;
-		u -= (viewWidth/2);
-		v *= viewHeight;
-		v -= (viewHeight/2);
+		System.out.println(W);
+		
+		double u = (-1*viewWidth/2) + (viewWidth)*inU;
+		double v = (-1*viewHeight/2) + (viewHeight)*inV;
+		
 		W.scale(projDistance*-1);
+		//System.out.println(projDistance);
 		U.scale(u);
 		V.scale(v);
+		//System.out.println(U);
+		//System.out.println(V);
+		System.out.println(W);
 		W.add(U);
 		W.add(V);
+		
 		Point3 p = new Point3();
 		p.set(0, 0, 0);
 		outRay.set(p, W);
+		//System.out.println(outRay);
+		outRay.start = 0;
+		outRay.end = Double.POSITIVE_INFINITY;
 	}
 }

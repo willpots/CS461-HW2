@@ -38,5 +38,7 @@ public class IntersectionRecord {
     t = inRecord.t;
 
   }
-
+  public String toString() {
+	  return "Location: "+location.toString()+" Vector: "+normal.toString()+" T: "+t;
+  }
 }

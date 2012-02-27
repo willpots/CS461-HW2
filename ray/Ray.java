@@ -95,4 +95,7 @@ public class Ray {
     start = EPSILON;
     end = newEnd;
   }
+  public String toString() {
+	  return "Point: "+origin+" Vector: "+direction+" Start: "+start+" End: "+end;
+  }
 }
