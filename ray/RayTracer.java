@@ -151,7 +151,7 @@ public class RayTracer {
 		
 		
 		// Reset the output color
-		outColor.set(0, 0, 0);
+		outColor.set(0.05, 0.05, 0.05);
 
 		IntersectionRecord eyeRecord = new IntersectionRecord();
 		Vector3 toEye = new Vector3();
@@ -163,8 +163,9 @@ public class RayTracer {
 		} else {
 			//System.out.println(eyeRecord);
 			double c = 1/eyeRecord.t;
+			c = Math.pow(c,3);
 
-			outColor.set(c,c,0);
+			outColor.set(c,c,c);
 			//System.out.println(outColor);
 			toEye.set(eyeRecord.location);
 			if (eyeRecord.surface != null) { 				
