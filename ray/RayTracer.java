@@ -165,7 +165,8 @@ public class RayTracer {
 			//System.out.println(eyeRecord.toString());
 			outColor.set(1,0,0);
 			toEye.set(eyeRecord.location);
-			if (eyeRecord.surface != null) {
+			if (eyeRecord.surface != null) { 
+				System.out.println(eyeRecord.surface);
 				//eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
 			} else {
 			
