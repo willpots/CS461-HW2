@@ -156,17 +156,18 @@ public class RayTracer {
 		IntersectionRecord eyeRecord = new IntersectionRecord();
 		Vector3 toEye = new Vector3();
 
-		//System.out.println(scene.getFirstIntersection(eyeRecord, ray));
-		//System.out.println(ray.toString());
 		if(scene.getFirstIntersection(eyeRecord, ray)==false) {
-			//System.out.println("Not Intersected!");
+			//System.out.println(eyeRecord);
+
 			return;
 		} else {
-			//System.out.println(eyeRecord.toString());
-			outColor.set(1,0,0);
+			//System.out.println(eyeRecord);
+			double c = 1/eyeRecord.t;
+
+			outColor.set(c,c,0);
+			//System.out.println(outColor);
 			toEye.set(eyeRecord.location);
-			if (eyeRecord.surface != null) { 
-				System.out.println(eyeRecord.surface);
+			if (eyeRecord.surface != null) { 				
 				//eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
 			} else {
 			

@@ -29,27 +29,28 @@ public class Box extends Surface {
 		// TODO: fill in this function.
 		// You will need to implement the three-slab intersection test
 		
+		// Our notes on box intersection were thin compared to
+		// those on sphere intersection, so we consulted this URL
+		// to help: http://courses.csusm.edu/cs697exz/ray_box.htm
+		
 		double tNear = Double.NEGATIVE_INFINITY;
 		double tFar = Double.POSITIVE_INFINITY;
-		
-		//Ray: R0 = (x0, y0, z0) , Rd = (xd, yd, zd) ray equation is R0 + Rdt 
-		
-		//minPt = (xl, yl, zl)
-		//maxPt = (xh, yh, zh)
-		
+		double t;
 		//For the pair of X planes
-		if (rayIn.direction.x == 0)
-			if (rayIn.origin.x < minPt.x || rayIn.origin.x > maxPt.x)
+		if (rayIn.direction.x == 0) {
+			if (rayIn.origin.x < minPt.x || rayIn.origin.x > maxPt.x) {
+				System.out.println("Y RAY MISSED");
 				return false;
-		else {
+			}
+		} else {
 		    double t1 = (minPt.x - rayIn.origin.x) / rayIn.direction.x;
 		    double t2 = (maxPt.x - rayIn.origin.x) / rayIn.direction.x;
 		    
 		    if (t1 > t2) {
-		    	double tmp = 0.0;
-		    	tmp = t1;
+		    	double tmp1 = 0.0;
+		    	tmp1 = t1;
 		    	t1 = t2;
-		    	t2 = tmp;
+		    	t2 = tmp1;
 		    }
 		    if (t1 > tNear)
 		    	tNear = t1;
@@ -62,23 +63,25 @@ public class Box extends Surface {
 		}
 		
 		//For the pair of Y planes
-		if (rayIn.direction.y == 0)
-			if (rayIn.origin.y < minPt.y || rayIn.origin.y > maxPt.y)
+		if (rayIn.direction.y == 0) {
+			if (rayIn.origin.y < minPt.y || rayIn.origin.y > maxPt.y) {
+				System.out.println("Y RAY MISSED");
 				return false;
-		else {
-		    double t1 = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
-		    double t2 = (maxPt.y - rayIn.origin.y) / rayIn.direction.y;
+			}
+		} else {
+		    double t3 = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
+		    double t4 = (maxPt.y - rayIn.origin.y) / rayIn.direction.y;
 		    
-		    if (t1 > t2) {
-		    	double tmp = 0.0;
-		    	tmp = t1;
-		    	t1 = t2;
-		    	t2 = tmp;
+		    if (t3 > t4) {
+		    	double tmp2 = 0.0;
+		    	tmp2 = t3;
+		    	t3 = t4;
+		    	t4 = tmp2;
 		    }
-		    if (t1 > tNear)
-		    	tNear = t1;
-		    if (t2 < tFar)
-		    	tFar = t2;
+		    if (t3 > tNear)
+		    	tNear = t3;
+		    if (t4 < tFar)
+		    	tFar = t4;
 		    if (tNear > tFar)
 		    	return false;
 		    if (tFar < 0)
@@ -86,29 +89,34 @@ public class Box extends Surface {
 		}    
 		
 		//For the pair of Z planes
-		if (rayIn.direction.z == 0)
-			if (rayIn.origin.z < minPt.z || rayIn.origin.z > maxPt.z)
+		if (rayIn.direction.z == 0) {
+			if (rayIn.origin.z < minPt.z || rayIn.origin.z > maxPt.z) {
+				System.out.println("z RAY MISSED");
 				return false;
-		else {
-		    double t1 = (minPt.z - rayIn.origin.z) / rayIn.direction.z;
-		    double t2 = (maxPt.z - rayIn.origin.z) / rayIn.direction.z;
+			}
+		} else {
+			
+		    double t5 = (minPt.z - rayIn.origin.z) / rayIn.direction.z;
+		    double t6 = (maxPt.z - rayIn.origin.z) / rayIn.direction.z;
 		    
-		    if (t1 > t2) {
-		    	double tmp = 0.0;
-		    	tmp = t1;
-		    	t1 = t2;
-		    	t2 = tmp;
+		    if (t5 > t6) {
+		    	double tmp3 = 0.0;
+		    	tmp3 = t5;
+		    	t5 = t6;
+		    	t6 = tmp3;
 		    }
-		    if (t1 > tNear)
-		    	tNear = t1;
-		    if (t2 < tFar)
-		    	tFar = t2;
+		    if (t5 > tNear)
+		    	tNear = t5;
+		    if (t6 < tFar)
+		    	tFar = t6;
 		    if (tNear > tFar)
 		    	return false;
 		    if (tFar < 0)
 		    	return false;
 		}
-		        
+		//outRecord.location.set();
+		outRecord.surface=this;
+		outRecord.t=tNear;
 		return true;
 	}
 	
