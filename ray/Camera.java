@@ -56,9 +56,9 @@ public class Camera {
 		// TODO: fill in this function. 
 		// set basis vectors according to projection normal and up direction
 		basisW.set(projNormal);
-		
+		basisW.normalize();
 		Vector3 temp = new Vector3();
-		temp.set(projNormal);
+		temp.set(basisW);
 		if(Math.abs(temp.x)<Math.abs(temp.y)) {
 			if(Math.abs(temp.x)<Math.abs(temp.z)){
 				temp.x=1;
@@ -76,7 +76,7 @@ public class Camera {
 		basisU.cross(temp,basisW);
 		basisU.scale(1/basisU.getMagnitude());
 		basisV.cross(basisW, basisU); 
-		System.out.println(basisU.getMagnitude());
+		//System.out.println(basisW);
 		initialized = true;
 	}
 	
@@ -97,12 +97,12 @@ public class Camera {
 		U.set(basisU);
 		Vector3 V = new Vector3();
 		V.set(basisV);
-		
+
 		Vector3 W = new Vector3();
 		W.set(basisW);
-		System.out.println(W);
+		//System.out.println(W);
 		
-		double u = (-1*viewWidth/2) + (viewWidth)*inU;
+		double u = (-viewWidth/2) + (viewWidth)*inU;
 		double v = (-1*viewHeight/2) + (viewHeight)*inV;
 		
 		W.scale(projDistance*-1);
@@ -111,13 +111,11 @@ public class Camera {
 		V.scale(v);
 		//System.out.println(U);
 		//System.out.println(V);
-		System.out.println(W);
+		//System.out.println(W);
 		W.add(U);
 		W.add(V);
 		
-		Point3 p = new Point3();
-		p.set(0, 0, 0);
-		outRay.set(p, W);
+		outRay.set(viewPoint, W);
 		//System.out.println(outRay);
 		outRay.start = 0;
 		outRay.end = Double.POSITIVE_INFINITY;

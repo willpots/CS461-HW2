@@ -54,7 +54,7 @@ public class Sphere extends Surface {
 		//System.out.print(discriminant+"  ");
 		//System.out.println(rayIn.toString());
 		if(discriminant<0.0) {
-			//System.out.println("Returning false!\n\n");
+			//System.out.println("Missed an intersection!\n");
 			return false;
 		} else {
 			d = new Vector3(rayIn.direction);
@@ -68,6 +68,7 @@ public class Sphere extends Surface {
 			else return false;
 			d.scale(t);
 
+			//System.out.println("Intersect at t: "+t);
 			outRecord.location.set(new Point3(d.x,d.y,d.z));
 			outRecord.surface = this;
 			outRecord.t=t;

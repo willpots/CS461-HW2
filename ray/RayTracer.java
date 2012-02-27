@@ -159,31 +159,18 @@ public class RayTracer {
 		//System.out.println(scene.getFirstIntersection(eyeRecord, ray));
 		//System.out.println(ray.toString());
 		if(scene.getFirstIntersection(eyeRecord, ray)==false) {
-			System.out.println("Not Intersected!");
-			outColor.set(1,0,0);
+			//System.out.println("Not Intersected!");
 			return;
 		} else {
 			//System.out.println(eyeRecord.toString());
+			outColor.set(1,0,0);
 			toEye.set(eyeRecord.location);
-			
-			
-			// TODO: Compute "toEye" from eyeRecord.
-			// toEye is the ray from the hit position to the eye.
-			
-
 			if (eyeRecord.surface != null) {
-				outColor.set(.1,0,0);
-				eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
+				//eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
 			} else {
+			
 			}
 		}
-		// TODO: Find the first intersection of "ray" with the scene.
-		// Record intersection in eyeRecord. If it doesn't hit anything, just return (exit function).
-		// Hint: look in the Scene class for appropriate methods
-
-		
-		// TODO: FIX FOR A CAMERA OTHER THAN 0,0,0
-
 	}
 
 }
