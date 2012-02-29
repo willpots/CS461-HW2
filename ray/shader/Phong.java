@@ -53,6 +53,11 @@ public class Phong extends Shader {
 		// Compute the color value
 		
 		outColor.set(0, 0, 0);
+		for (Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
+			Light light = iter.next();
+			
+		
+		}
 	}
 	
 	/**

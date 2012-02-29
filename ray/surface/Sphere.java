@@ -38,23 +38,15 @@ public class Sphere extends Surface {
 		Point3 o = new Point3(rayIn.origin);
 		Vector3 d = new Vector3(rayIn.direction);
 		
-		//System.out.println(d);
 		Point3 c = center;
-		//System.out.println(c);
 		Vector3 oc = new Vector3();
 		oc.sub(o, c);	
-		//System.out.println(radius);
 		double A = d.dot(d);
-		//System.out.println(A);
 		double C = oc.dot(oc) - Math.pow(radius, 2);
 		d.scale(2);
 		double B = d.dot(oc);
 		double discriminant = (Math.pow(B, 2)-(4*A*C));
-		//System.out.print("D: "+d+" A: "+A+" B: "+B+" C: "+C+" ");
-		//System.out.print(discriminant+"  ");
-		//System.out.println(rayIn.toString());
 		if(discriminant<0.0) {
-			//System.out.println("Missed an intersection!\n");
 			return false;
 		} else {
 			d = new Vector3(rayIn.direction);
@@ -68,9 +60,12 @@ public class Sphere extends Surface {
 			else return false;
 			d.scale(t);
 
-			//System.out.println("Intersect at t: "+t);
 			outRecord.location.set(new Point3(d.x,d.y,d.z));
 			outRecord.surface = this;
+			Vector3 n = new Vector3();
+			n.sub(outRecord.location,c);
+			n.normalize();
+			outRecord.normal.set(n);
 			outRecord.t=t;
 
 			rayIn.start=0;

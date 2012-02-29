@@ -100,23 +100,17 @@ public class Camera {
 
 		Vector3 W = new Vector3();
 		W.set(basisW);
-		//System.out.println(W);
 		
 		double u = (-viewWidth/2) + (viewWidth)*inU;
 		double v = (-1*viewHeight/2) + (viewHeight)*inV;
 		
 		W.scale(projDistance*-1);
-		//System.out.println(projDistance);
 		U.scale(u);
 		V.scale(v);
-		//System.out.println(U);
-		//System.out.println(V);
-		//System.out.println(W);
 		W.add(U);
 		W.add(V);
 		
 		outRay.set(viewPoint, W);
-		//System.out.println(outRay);
 		outRay.start = 0;
 		outRay.end = Double.POSITIVE_INFINITY;
 	}

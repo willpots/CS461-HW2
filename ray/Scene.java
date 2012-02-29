@@ -85,18 +85,16 @@ public class Scene {
 		tRec.t=Double.POSITIVE_INFINITY;
 		for(Iterator<Surface> iter = surfaces.iterator(); iter.hasNext();) {
 			Surface s = iter.next();
-			if(s.intersect(tmp, rayIn)) {
-				if(anyIntersection==true) return true;
+			if(s.intersect(tmp, ray)) {
+				if(anyIntersection) return true;
 				ret=true;
-				ray=rayIn;
-				//System.out.println(tmp);
-
+				rayIn.set(ray.origin, ray.direction);
+				rayIn.start=ray.start;
+				rayIn.end=ray.end;
 				if(tmp.t<tRec.t) tRec.set(tmp);	
 			}
-			//System.out.println(outRecord);
 		}
 		if(ret) outRecord.set(tRec);
-		//return ((Math.round(ray.direction.x)%4)==0||(Math.round(ray.direction.y)%4)==0||(Math.round(ray.direction.z)%4)==0);
 		return ret;
 	}
 
