@@ -76,7 +76,6 @@ public class Camera {
 		basisU.cross(temp,basisW);
 		basisU.scale(1/basisU.getMagnitude());
 		basisV.cross(basisW, basisU); 
-		//System.out.println(basisW);
 		initialized = true;
 	}
 	
@@ -89,10 +88,6 @@ public class Camera {
 	 */
 	public void getRay(Ray outRay, double inU, double inV) {
 		if (!initialized) initView();
-		// TODO: fill in this function.
-		// map u coord from [0,1] to [-viewWidth/2, viewWidth/2], similarly for v
-		// then set the output ray, including its start and end points (hint: use Double.POSITIVE_INFINITY)
-		//System.out.println("["+inU+","+inV+"]");
 		Vector3 U = new Vector3();
 		U.set(basisU);
 		Vector3 V = new Vector3();
@@ -102,7 +97,7 @@ public class Camera {
 		W.set(basisW);
 		
 		double u = (-viewWidth/2) + (viewWidth)*inU;
-		double v = (-1*viewHeight/2) + (viewHeight)*inV;
+		double v = (-viewHeight/2) + (viewHeight)*inV;
 		
 		W.scale(projDistance*-1);
 		U.scale(u);

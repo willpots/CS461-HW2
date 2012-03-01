@@ -51,13 +51,31 @@ public class Phong extends Shader {
 		// Calculate the half vector and normalize
 		// Compute the specular scale factor
 		// Compute the color value
+		Vector3 h = new Vector3();
+
+		Vector3 lV = new Vector3();
+		Vector3 n = new Vector3(record.normal);
 		
-		outColor.set(0, 0, 0);
+		double r=0,g=0,b=0;
+		Color kd=new Color(diffuseColor.r,diffuseColor.g,diffuseColor.b);
+		Color ks=new Color(specularColor.r,specularColor.g,specularColor.b);
+		
 		for (Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
-			Light light = iter.next();
-			
-		
+			Light l = iter.next();
+			lV.sub(record.location,l.position);
+			lV.normalize();
+			h.add(toEye, lV);
+			h.normalize();
+
+
+			r += (ks.r * l.intensity.r * Math.pow(Math.max(0, n.dot(h)),exponent));
+			g += (ks.g * l.intensity.g * Math.pow(Math.max(0, n.dot(h)),exponent));
+			b += (ks.b * l.intensity.b * Math.pow(Math.max(0, n.dot(h)),exponent));
+			r += (kd.r * l.intensity.r * Math.max(0,lV.dot(n)));
+			g += (kd.g * l.intensity.g * Math.max(0,lV.dot(n)));
+			b += (kd.b * l.intensity.b * Math.max(0,lV.dot(n)));
 		}
+		outColor.set(r, g, b);
 	}
 	
 	/**

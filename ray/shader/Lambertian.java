@@ -34,33 +34,26 @@ public class Lambertian extends Shader {
 	 */
 	public void shade(Color outColor, Scene scene, ArrayList<Light> lights, Vector3 toEye, 
 			IntersectionRecord record) {
-		// TODO: fill in this function.
-		// Hint: 
-		//   1. Add contribution to the final pixel from each light source. 
-		//   2. See how to use isShadowed().
+
 		Color kd = new Color(diffuseColor.r,diffuseColor.g,diffuseColor.b);
-		Vector3 n = new Vector3();
-		n.set(record.normal);
-		n.normalize();
+		Vector3 n = new Vector3(record.normal);
 		double r=0,g=0,b=0;
 
-
-		
-		// Can iterate over lights as like this:
 		for (Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
 			Light l = iter.next();
 			Vector3 lV = new Vector3();
-			lV.sub(l.position,record.location);
+
+			//lV.sub(l.position,record.location);
+			lV.sub(record.location, l.position);
 			lV.normalize();
-			//if(!isShadowed(scene, l, record)) {
-				r += (kd.r * l.intensity.r * Math.max(0,lV.dot(n)));
-				g += (kd.g * l.intensity.g * Math.max(0,lV.dot(n)));
-				b += (kd.b * l.intensity.b * Math.max(0,lV.dot(n)));
-			//}
+
+			r += (kd.r * l.intensity.r * lV.dot(n));
+			g += (kd.g * l.intensity.g * lV.dot(n));
+			b += (kd.b * l.intensity.b * lV.dot(n));
+
 		}
 		outColor.set(r, g, b);
-		//outColor.set(kd);
-		//System.out.println(outColor);
+
 	}
 	
 	/**

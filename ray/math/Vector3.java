@@ -24,7 +24,6 @@ public class Vector3 extends Tuple3 {
    * Default constructor.  Uses explicit constructor to create a zero vector.
    */
   public Vector3() {
-
     super(0, 0, 0);
   }
 
@@ -34,7 +33,6 @@ public class Vector3 extends Tuple3 {
    * @param newTuple The vector to copy.
    */
   public Vector3(Tuple3 newTuple) {
-
     super(newTuple.x, newTuple.y, newTuple.z);
   }
 
@@ -47,9 +45,7 @@ public class Vector3 extends Tuple3 {
    * @param newZ The z value of the new vector.
    */
   public Vector3(double newX, double newY, double newZ) {
-
     super(newX, newY, newZ);
-
   }
 
   /**
@@ -58,11 +54,9 @@ public class Vector3 extends Tuple3 {
    * @param op2
    */
   public void cross(Vector3 op1, Vector3 op2) {
-
     this.x = op1.y * op2.z - op1.z * op2.y;
     this.y = op1.z * op2.x - op1.x * op2.z;
     this.z = op1.x * op2.y - op1.y * op2.x;
-
   }
 
   /**

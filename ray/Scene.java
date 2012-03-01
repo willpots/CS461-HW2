@@ -87,11 +87,13 @@ public class Scene {
 			Surface s = iter.next();
 			if(s.intersect(tmp, ray)) {
 				if(anyIntersection) return true;
-				ret=true;
-				rayIn.set(ray.origin, ray.direction);
-				rayIn.start=ray.start;
-				rayIn.end=ray.end;
-				if(tmp.t<tRec.t) tRec.set(tmp);	
+				else {
+					ret=true;
+					rayIn.set(ray.origin, ray.direction);
+					rayIn.start=ray.start;
+					rayIn.end=ray.end;
+					if(tmp.t<tRec.t) tRec.set(tmp);	
+				}
 			}
 		}
 		if(ret) outRecord.set(tRec);

@@ -40,7 +40,7 @@ public class Sphere extends Surface {
 		
 		Point3 c = center;
 		Vector3 oc = new Vector3();
-		oc.sub(o, c);	
+		oc.sub(o,c);	
 		double A = d.dot(d);
 		double C = oc.dot(oc) - Math.pow(radius, 2);
 		d.scale(2);
@@ -50,22 +50,24 @@ public class Sphere extends Surface {
 			return false;
 		} else {
 			d = new Vector3(rayIn.direction);
-			double t0 = ((-1*B) + Math.sqrt(discriminant))/(2*A);
-			double t1 = ((-1*B) - Math.sqrt(discriminant))/(2*A);
+			double t0 = ((-B) + Math.sqrt(discriminant))/(2*A);
+			double t1 = ((-B) - Math.sqrt(discriminant))/(2*A);
 			double t;
 			if(t0<0) t=t1;
 			else if(t1<0) t=t0;	
-			else if(t1>t0) t=t0;
+			else if(t1>=t0) t=t0;
 			else if(t1<t0) t=t1;
 			else return false;
 			d.scale(t);
 
-			outRecord.location.set(new Point3(d.x,d.y,d.z));
+			// Calculate the outRecord
+			// Normal Points from CENTER TO POINT on the sphere.
+			outRecord.location.set(rayIn.origin);
+			outRecord.location.add(d);
 			outRecord.surface = this;
-			Vector3 n = new Vector3();
-			n.sub(outRecord.location,c);
-			n.normalize();
-			outRecord.normal.set(n);
+			outRecord.normal.set(new Vector3());
+			outRecord.normal.sub(center,outRecord.location);
+			outRecord.normal.normalize();
 			outRecord.t=t;
 
 			rayIn.start=0;

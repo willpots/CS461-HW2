@@ -26,8 +26,7 @@ public class Box extends Surface {
 	 * @return true if the surface intersects the ray
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
-		// TODO: fill in this function.
-		// You will need to implement the three-slab intersection test
+		// We implemented the three-slab intersection test
 		
 		// Our notes on box intersection were thin compared to
 		// those on sphere intersection, so we consulted this URL

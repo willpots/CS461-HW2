@@ -42,28 +42,7 @@ public abstract class Shader {
 	protected boolean isShadowed(Scene scene, Light light, IntersectionRecord record) {
 		
 		// TODO (soon): fill in this function
-		// To see if point p is shadowed for light sources in dir l
-		// Intersect shadow ray with scene
-		// Shadow Ray = p + t*l
-		// t must not be longer than the distance of the light ray
-		// t > Double.EPSILON
-		//
-		//
-		
-		Ray l = new Ray();
-		l.direction.set(new Vector3());
-		//l.direction.sub(record.location, light.position);
-		l.direction.sub(light.position,record.location);
-		l.origin.set(record.location);
-		l.start=Ray.EPSILON;
-		l.end=record.location.distance(light.position);
 
-		if(scene.getAnyIntersection(l)) {
-			//System.out.println("Shadowed");
-			return true;
-		} else {
-			//System.out.println("Not Shadowed");
-			return false;
-		}
+		return false;
 	}
 }
