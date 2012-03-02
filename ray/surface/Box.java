@@ -35,6 +35,7 @@ public class Box extends Surface {
 		double tNear = Double.NEGATIVE_INFINITY;
 		double tFar = Double.POSITIVE_INFINITY;
 		double t;
+		Vector3 n = new Vector3();
 		//For the pair of X planes
 		if (rayIn.direction.x == 0) {
 			if (rayIn.origin.x < minPt.x || rayIn.origin.x > maxPt.x) {
@@ -42,17 +43,21 @@ public class Box extends Surface {
 				return false;
 			}
 		} else {
+			Vector3 xV = new Vector3(maxPt.x-minPt.x,0,0);
+
 		    double t1 = (minPt.x - rayIn.origin.x) / rayIn.direction.x;
 		    double t2 = (maxPt.x - rayIn.origin.x) / rayIn.direction.x;
 		    
 		    if (t1 > t2) {
-		    	double tmp1 = 0.0;
-		    	tmp1 = t1;
+		    	double tmp1 = t1;
 		    	t1 = t2;
 		    	t2 = tmp1;
+				xV = new Vector3(minPt.x-maxPt.x,0,0);
+
 		    }
 		    if (t1 > tNear)
 		    	tNear = t1;
+		    	n.set(xV);
 		    if (t2 < tFar)
 		    	tFar = t2;
 		    if (tNear > tFar)
@@ -68,17 +73,21 @@ public class Box extends Surface {
 				return false;
 			}
 		} else {
+			Vector3 yV = new Vector3(0,maxPt.y-minPt.y,0);
+
 		    double t3 = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
 		    double t4 = (maxPt.y - rayIn.origin.y) / rayIn.direction.y;
 		    
 		    if (t3 > t4) {
-		    	double tmp2 = 0.0;
+		    	double tmp2;
 		    	tmp2 = t3;
 		    	t3 = t4;
 		    	t4 = tmp2;
+				yV = new Vector3(0,minPt.z-maxPt.z,0);
 		    }
 		    if (t3 > tNear)
 		    	tNear = t3;
+		    	n.set(yV);
 		    if (t4 < tFar)
 		    	tFar = t4;
 		    if (tNear > tFar)
@@ -94,18 +103,20 @@ public class Box extends Surface {
 				return false;
 			}
 		} else {
+			Vector3 zV = new Vector3(0,0,maxPt.z-minPt.z);
 			
 		    double t5 = (minPt.z - rayIn.origin.z) / rayIn.direction.z;
 		    double t6 = (maxPt.z - rayIn.origin.z) / rayIn.direction.z;
 		    
 		    if (t5 > t6) {
-		    	double tmp3 = 0.0;
-		    	tmp3 = t5;
+		    	double tmp3 = t5;
 		    	t5 = t6;
 		    	t6 = tmp3;
+				zV = new Vector3(0,0,minPt.z-maxPt.z);
 		    }
 		    if (t5 > tNear)
 		    	tNear = t5;
+		    	n.set(zV);
 		    if (t6 < tFar)
 		    	tFar = t6;
 		    if (tNear > tFar)
@@ -113,9 +124,19 @@ public class Box extends Surface {
 		    if (tFar < 0)
 		    	return false;
 		}
-		//outRecord.location.set();
+		
+		// After your if statements
+		Point3 p = new Point3(rayIn.origin);
+		Vector3 d = new Vector3(rayIn.direction);
+		d.scale(tNear);
+		p.add(d);
+		outRecord.location.set(p);
 		outRecord.surface=this;
 		outRecord.t=tNear;
+
+		outRecord.normal.set(n);
+		outRecord.normal.add(new Vector3(outRecord.location));
+		outRecord.normal.normalize();
 		return true;
 	}
 	

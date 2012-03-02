@@ -7,3 +7,7 @@ TEST1/four-spheres.xml.png
 ray/Camera.class
 ray/Camera.class
 ray/IntersectionRecord.class
+
+ray/shader/Phong.class
+
+ray/shader/Phong.class
