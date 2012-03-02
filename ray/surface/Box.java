@@ -35,22 +35,26 @@ public class Box extends Surface {
 		double tNear = Double.NEGATIVE_INFINITY;
 		double tFar = Double.POSITIVE_INFINITY;
 
-		double t1=0,t2=0,t3=0,t4=0,t5=0,t6=0;
-
+		double x=0,y=0,z=0;
+		double t1 = (minPt.x - rayIn.origin.x) / rayIn.direction.x;
+		double t2 = (maxPt.x - rayIn.origin.x) / rayIn.direction.x;
+		double t3 = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
+	    double t4 = (maxPt.y - rayIn.origin.y) / rayIn.direction.y;
+	    double t5 = (minPt.z - rayIn.origin.z) / rayIn.direction.z;
+	    double t6 = (maxPt.z - rayIn.origin.z) / rayIn.direction.z;
 		//For the pair of X planes
 		if (rayIn.direction.x == 0) {
 			if (rayIn.origin.x < minPt.x || rayIn.origin.x > maxPt.x) {
 				System.out.println("Y RAY MISSED");
 				return false;
 			}
-		} else {			
-		    t1 = (minPt.x - rayIn.origin.x) / rayIn.direction.x;
-		    t2 = (maxPt.x - rayIn.origin.x) / rayIn.direction.x;
-		    
+		} else {	
+			x=1;
 		    if (t1 > t2) {
 		    	double tmp1 = t1;
 		    	t1 = t2;
 		    	t2 = tmp1;
+		    	x=-1;
 		    }
 		    if (t1 > tNear)
 		    	tNear = t1;
@@ -69,14 +73,12 @@ public class Box extends Surface {
 				return false;
 			}
 		} else {
-		    t3 = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
-		    t4 = (maxPt.y - rayIn.origin.y) / rayIn.direction.y;
-		    
+			y=1;
 		    if (t3 > t4) {
-		    	double tmp2;
-		    	tmp2 = t3;
+		    	double tmp2 = t3;
 		    	t3 = t4;
 		    	t4 = tmp2;
+		    	y=-1;
 		    }
 		    if (t3 > tNear)
 		    	tNear = t3;
@@ -95,13 +97,12 @@ public class Box extends Surface {
 				return false;
 			}
 		} else {
-		    t5 = (minPt.z - rayIn.origin.z) / rayIn.direction.z;
-		    t6 = (maxPt.z - rayIn.origin.z) / rayIn.direction.z;
-		    
+			z=1;
 		    if (t5 > t6) {
 		    	double tmp3 = t5;
 		    	t5 = t6;
 		    	t6 = tmp3;
+		    	z=-1;
 		    }
 		    if (t5 > tNear)
 		    	tNear = t5;
@@ -117,11 +118,11 @@ public class Box extends Surface {
 		outRecord.surface=this;
 		outRecord.t=tNear;
 		if(tNear==t1) {
-			outRecord.normal.set(new Vector3(-1,0,0));
+			outRecord.normal.set(new Vector3(x,0,0));
 		} else if (tNear==t3) {
-			outRecord.normal.set(new Vector3(0,-1,0));
+			outRecord.normal.set(new Vector3(0,y,0));
 		} else if (tNear==t5) {
-			outRecord.normal.set(new Vector3(0,0,-1));
+			outRecord.normal.set(new Vector3(0,0,z));
 		}
 		outRecord.normal.normalize();
 
