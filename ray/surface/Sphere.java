@@ -62,8 +62,8 @@ public class Sphere extends Surface {
 
 			// Calculate the outRecord
 			// Normal Points from CENTER TO POINT on the sphere.
-			outRecord.location.set(rayIn.origin);
-			outRecord.location.add(d);
+
+			rayIn.evaluate(outRecord.location, t);
 			outRecord.surface = this;
 			outRecord.normal.set(new Vector3());
 			outRecord.normal.sub(center,outRecord.location);
