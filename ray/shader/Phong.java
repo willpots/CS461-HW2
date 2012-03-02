@@ -42,15 +42,7 @@ public class Phong extends Shader {
 	 */
 	public void shade(Color outColor, Scene scene, ArrayList<Light> lights, Vector3 toEye, 
 			IntersectionRecord record) {	
-		// TODO: fill in this function.
-		// Hint: 
-		//   1. Add contribution to the final pixel from each light source. 
-		//   2. See how to use isShadowed().
-		
-		// Get the light direction
-		// Calculate the half vector and normalize
-		// Compute the specular scale factor
-		// Compute the color value
+
 		Vector3 h = new Vector3();
 
 		Vector3 lV = new Vector3();
@@ -62,6 +54,7 @@ public class Phong extends Shader {
 		
 		for (Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
 			Light l = iter.next();
+			// Calculate l and h
 			lV.sub(record.location,l.position);
 			lV.normalize();
 			h.add(toEye, lV);
@@ -71,7 +64,7 @@ public class Phong extends Shader {
 			r += (kd.r * l.intensity.r * Math.max(0,lV.dot(n)));
 			g += (kd.g * l.intensity.g * Math.max(0,lV.dot(n)));
 			b += (kd.b * l.intensity.b * Math.max(0,lV.dot(n)));
-			
+			// Phong Component
 			r += (ks.r * l.intensity.r * Math.pow(Math.max(0, n.dot(h)),exponent));
 			g += (ks.g * l.intensity.g * Math.pow(Math.max(0, n.dot(h)),exponent));
 			b += (ks.b * l.intensity.b * Math.pow(Math.max(0, n.dot(h)),exponent));

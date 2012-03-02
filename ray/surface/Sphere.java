@@ -34,7 +34,8 @@ public class Sphere extends Surface {
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn) {
 
-
+		// Calculate the various components of the sphere intersection formula.
+		// Comes from the Computer Graphics textbook.
 		Point3 o = new Point3(rayIn.origin);
 		Vector3 d = new Vector3(rayIn.direction);
 		
@@ -61,10 +62,9 @@ public class Sphere extends Surface {
 			d.scale(t);
 
 			// Calculate the outRecord
-			// Normal Points from CENTER TO POINT on the sphere.
-
 			rayIn.evaluate(outRecord.location, t);
 			outRecord.surface = this;
+			// Normal = center-location (normalized)
 			outRecord.normal.set(new Vector3());
 			outRecord.normal.sub(center,outRecord.location);
 			outRecord.normal.normalize();

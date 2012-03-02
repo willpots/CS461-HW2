@@ -36,6 +36,7 @@ public class Box extends Surface {
 		double tFar = Double.POSITIVE_INFINITY;
 
 		double x=0,y=0,z=0;
+		// Calculate all of the T Values.
 		double t1 = (minPt.x - rayIn.origin.x) / rayIn.direction.x;
 		double t2 = (maxPt.x - rayIn.origin.x) / rayIn.direction.x;
 		double t3 = (minPt.y - rayIn.origin.y) / rayIn.direction.y;
@@ -49,8 +50,11 @@ public class Box extends Surface {
 				return false;
 			}
 		} else {	
+			// X component of the normal vector is 1 by default.
 			x=1;
 		    if (t1 > t2) {
+		    	// If it enters on the other side however, switch x to -1 and switch
+		    	// t1 and t2
 		    	double tmp1 = t1;
 		    	t1 = t2;
 		    	t2 = tmp1;
@@ -73,7 +77,10 @@ public class Box extends Surface {
 				return false;
 			}
 		} else {
+			// Y component of the normal vector is 1 by default.	
 			y=1;
+	    	// If it enters on the other side however, switch z to -1 and switch
+	    	// t3 and t4
 		    if (t3 > t4) {
 		    	double tmp2 = t3;
 		    	t3 = t4;
@@ -97,8 +104,11 @@ public class Box extends Surface {
 				return false;
 			}
 		} else {
+			// Z component of the normal vector is 1 by default.	
 			z=1;
-		    if (t5 > t6) {
+	    	// If it enters on the other side however, switch z to -1 and switch
+	    	// t5 and t6		    
+			if (t5 > t6) {
 		    	double tmp3 = t5;
 		    	t5 = t6;
 		    	t6 = tmp3;
@@ -113,10 +123,11 @@ public class Box extends Surface {
 		    if (tFar < 0)
 		    	return false;
 		}
-		
+		// Set the location point.
 		rayIn.evaluate(outRecord.location, tNear);
 		outRecord.surface=this;
 		outRecord.t=tNear;
+		// Set the Normal Vector.
 		if(tNear==t1) {
 			outRecord.normal.set(new Vector3(x,0,0));
 		} else if (tNear==t3) {

@@ -53,7 +53,7 @@ public class Camera {
 	 * Initialize the derived view variables to prepare for using the camera.
 	 */
 	public void initView() {
-		// TODO: fill in this function. 
+
 		// set basis vectors according to projection normal and up direction
 		basisW.set(projNormal);
 		basisW.normalize();
@@ -95,15 +95,13 @@ public class Camera {
 
 		Vector3 W = new Vector3();
 		W.set(basisW);
-		
+		// Formula Comes from the Computer Graphics Textbook
 		double u = (-viewWidth/2) + (viewWidth)*inU;
 		double v = (-viewHeight/2) + (viewHeight)*inV;
 		
 		W.scale(projDistance*-1);
-		U.scale(u);
-		V.scale(v);
-		W.add(U);
-		W.add(V);
+		W.scaleAdd(u,U);
+		W.scaleAdd(v,V);
 		
 		outRay.set(viewPoint, W);
 		outRay.start = 0;

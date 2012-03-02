@@ -38,15 +38,14 @@ public class Lambertian extends Shader {
 		Color kd = new Color(diffuseColor.r,diffuseColor.g,diffuseColor.b);
 		Vector3 n = new Vector3(record.normal);
 		double r=0,g=0,b=0;
-
+		// Run through the lights.
 		for (Iterator<Light> iter = lights.iterator(); iter.hasNext();) {
 			Light l = iter.next();
 			Vector3 lV = new Vector3();
 
-			//lV.sub(l.position,record.location);
 			lV.sub(record.location, l.position);
 			lV.normalize();
-
+			// Add light intensities to each component.
 			r += (kd.r * l.intensity.r * lV.dot(n));
 			g += (kd.g * l.intensity.g * lV.dot(n));
 			b += (kd.b * l.intensity.b * lV.dot(n));

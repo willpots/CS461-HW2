@@ -108,17 +108,15 @@ public class RayTracer {
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
 				
-				// TODO: Compute the ray (look in Camera class)
-				// map x, y to "unit" coords in [0, 1]
+				// Calculate pixel values with a .5 pixel offset.
 				double u = (x+.5)/width;
 				double v = (y+.5)/height;
-				
-				
-				
+				// Get the ray from Camera.
 				cam.getRay(ray, u, v);
-				//System.out.println("Ray: "+ray.toString());
+
 				shadeRay(rayColor, scene, ray, scene.getLights(), 1, 1, false);
 				pixelColor.set(rayColor);
+
 				//Gamma correct and clamp pixel values
 				pixelColor.gammaCorrect(2.2);
 				pixelColor.clamp(0, 1);
@@ -149,19 +147,19 @@ public class RayTracer {
 	public static void shadeRay(Color outColor, Scene scene, Ray ray,// Workspace workspace, 
 			ArrayList<Light> lights, int depth, double contribution, boolean internal) {
 		
-		
 		// Reset the output color
 		outColor.set(0, 0, 0);
 
 		IntersectionRecord eyeRecord = new IntersectionRecord();
 		Vector3 toEye = new Vector3();
-
+		// look for intersections
 		if(scene.getFirstIntersection(eyeRecord, ray)==false) {
 			return;
 		} else {
+			// Calculate v vector
 			toEye.sub(eyeRecord.location,ray.origin);
 			toEye.normalize();
-
+			// Shade the pixel based on the object found.
 			if (eyeRecord.surface != null) { 				
 				eyeRecord.surface.getShader().shade(outColor, scene, lights, toEye, eyeRecord);
 			} 
