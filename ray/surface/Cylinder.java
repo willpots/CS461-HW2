@@ -55,10 +55,11 @@ public class Cylinder extends Surface {
 		Point3 c = center;
 		double R = radius;
 		double H = height;
+		Point3 pc = new Point3(p.x - c.x, p.y - c.y, p.z - c.z);
 
 		double A = Math.pow(d.x, 2) + Math.pow(d.y, 2);
-		double B = 2 * (p.x * d.x + p.y * d.y);
-		double C = Math.pow(p.x, 2) + Math.pow(p.y, 2) - Math.pow(R, 2);
+		double B = 2 * (pc.x * d.x + pc.y * d.y);
+		double C = Math.pow(pc.x, 2) + Math.pow(pc.y, 2) - Math.pow(R, 2);
 
 		double discriminant = (Math.pow(B, 2) - (4 * A * C));
 		if (discriminant < 0.0) {
@@ -76,7 +77,8 @@ public class Cylinder extends Surface {
 			rayIn.evaluate(q0, t0);
 			rayIn.evaluate(q1, t1);
 
-			if ((q0.z >= 0 && q0.z <= H) && (q1.z >= 0 && q1.z <= H)) {
+			if ((q0.z >= c.z - H/2 && q0.z <= c.z + H/2)
+					&& (q1.z >= c.z - H/2 && q1.z <= c.z + H/2)) {
 				if (t0 < t1) {
 					// System.out.println("both t0");
 					t = t0;
@@ -84,10 +86,12 @@ public class Cylinder extends Surface {
 					// System.out.println("both t1");
 					t = t1;
 				}
-			} else if ((q0.z >= 0 && q0.z <= H) && !(q1.z >= 0 & q1.z <= H)) {
+			} else if ((q0.z >= c.z - H/2 && q0.z <= c.z + H/2)
+					&& !(q1.z >= c.z - H/2 & q1.z <= c.z + H/2)) {
 				// System.out.println("only t0");
 				t = t0;
-			} else if (!(q0.z >= 0 && q0.z <= H) && (q1.z >= 0 && q1.z <= H)) {
+			} else if (!(q0.z >= c.z - H/2 && q0.z <= c.z + H/2)
+					&& (q1.z >= c.z - H/2 && q1.z <= c.z + H/2)) {
 				// System.out.println("only t1");
 				t = t1;
 			} else {
@@ -105,6 +109,7 @@ public class Cylinder extends Surface {
 
 			outRecord.normal.set(new Vector3(q.x, q.y, 0));
 			outRecord.normal.normalize();
+			outRecord.normal.scale(-1);
 
 			return true;
 		}
@@ -115,7 +120,7 @@ public class Cylinder extends Surface {
 	 * @see Object#toString()
 	 */
 	public String toString() {
-		return "Cylinder " + center + " " + radius + " " + height + " "
-				+ shader + " end";
+		return "Cone " + center + " " + radius + " " + height + " " + tipz
+				+ " " + shader + " end";
 	}
 }
