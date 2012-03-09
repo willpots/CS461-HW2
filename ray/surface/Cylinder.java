@@ -107,7 +107,7 @@ public class Cylinder extends Surface {
 			outRecord.surface = this;
 			outRecord.t = t;
 
-			outRecord.normal.set(new Vector3(q.x, q.y, 0.0));
+			outRecord.normal.set(new Vector3(q.x-c.x, q.y-c.y, 0));
 			outRecord.normal.normalize();
 			outRecord.normal.scale(-1);
 

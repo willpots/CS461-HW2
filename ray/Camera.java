@@ -73,8 +73,8 @@ public class Camera {
 			}
 		}
 
-		basisU.cross(temp,basisW);
-		basisU.scale(1/basisU.getMagnitude());
+		basisU.cross(viewUp,basisW);
+		basisU.normalize();
 		basisV.cross(basisW, basisU); 
 		initialized = true;
 	}
