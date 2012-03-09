@@ -13,45 +13,59 @@ import ray.math.Vector3;
 /**
  * This interface specifies what is necessary for an object to be a material.
  * The shade method is pretty obvious - a material should know how to "color"
- * itself.  The copy method is needed so that a deep copy may be performed by
+ * itself. The copy method is needed so that a deep copy may be performed by
  * Surface objects, which all have a generic reference to a material.
+ * 
  * @author ags, modified by DS 2/2012
  */
 public abstract class Shader {
-	
+
 	/**
 	 * The material given to all surfaces unless another is specified.
 	 */
 	public static final Shader DEFAULT_MATERIAL = new Lambertian();
-	
+
 	/**
-	 * Calculate the BRDF value for this material at the intersection described in record.
-	 * Returns the BRDF color in outColor.
-	 * @param outColor Space for the output color
-	 * @param scene The scene
-	 * @param lights The lights
-	 * @param toEye Vector pointing towards the eye
-	 * @param record The intersection record, which hold the location, normal, etc.
+	 * Calculate the BRDF value for this material at the intersection described
+	 * in record. Returns the BRDF color in outColor.
+	 * 
+	 * @param outColor
+	 *            Space for the output color
+	 * @param scene
+	 *            The scene
+	 * @param lights
+	 *            The lights
+	 * @param toEye
+	 *            Vector pointing towards the eye
+	 * @param record
+	 *            The intersection record, which hold the location, normal, etc.
 	 */
-	public abstract void shade(Color outColor, Scene scene, ArrayList<Light> lights, Vector3 toEye, 
-			IntersectionRecord record);
-	
+	public abstract void shade(Color outColor, Scene scene,
+			ArrayList<Light> lights, Vector3 toEye, IntersectionRecord record);
+
 	/**
 	 * Utility method to compute shadows.
 	 */
-	protected boolean isShadowed(Scene scene, Light light, IntersectionRecord record) {
-		
+	protected boolean isShadowed(Scene scene, Light light,
+			IntersectionRecord record) {
+
 		Point3 p = new Point3(record.location);
 		Vector3 lV = new Vector3();
-		lV.sub(record.location, light.position);
+		lV.sub(light.position, record.location);
 		lV.normalize();
-		Ray r = new Ray(p,lV);
-		r.start=Ray.EPSILON;
-		r.end=Double.POSITIVE_INFINITY;
+		// comment out the next line for negative shadows.  possible progress?
+		lV.scale(-1);
+
+		Ray r = new Ray(p, lV);
+
+		r.start = Ray.EPSILON;
+		r.end = Double.POSITIVE_INFINITY;
 		r.makeOffsetRay();
+
 		IntersectionRecord tmp = new IntersectionRecord();
-		if(scene.intersect(tmp,r,true)) {
-			if(r.end<tmp.t) return true;
+		if (scene.intersect(tmp, r, true)) {
+			if (r.end < tmp.t)
+				return true;
 		}
 		return false;
 	}
