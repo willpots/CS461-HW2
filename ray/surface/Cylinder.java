@@ -77,8 +77,8 @@ public class Cylinder extends Surface {
 			rayIn.evaluate(q0, t0);
 			rayIn.evaluate(q1, t1);
 
-			if ((q0.z >= c.z - H/2 && q0.z <= c.z + H/2)
-					&& (q1.z >= c.z - H/2 && q1.z <= c.z + H/2)) {
+			if ((q0.z >= c.z - H / 2 && q0.z <= c.z + H / 2)
+					&& (q1.z >= c.z - H / 2 && q1.z <= c.z + H / 2)) {
 				if (t0 < t1) {
 					// System.out.println("both t0");
 					t = t0;
@@ -86,12 +86,12 @@ public class Cylinder extends Surface {
 					// System.out.println("both t1");
 					t = t1;
 				}
-			} else if ((q0.z >= c.z - H/2 && q0.z <= c.z + H/2)
-					&& !(q1.z >= c.z - H/2 & q1.z <= c.z + H/2)) {
+			} else if ((q0.z >= c.z - H / 2 && q0.z <= c.z + H / 2)
+					&& !(q1.z >= c.z - H / 2 & q1.z <= c.z + H / 2)) {
 				// System.out.println("only t0");
 				t = t0;
-			} else if (!(q0.z >= c.z - H/2 && q0.z <= c.z + H/2)
-					&& (q1.z >= c.z - H/2 && q1.z <= c.z + H/2)) {
+			} else if (!(q0.z >= c.z - H / 2 && q0.z <= c.z + H / 2)
+					&& (q1.z >= c.z - H / 2 && q1.z <= c.z + H / 2)) {
 				// System.out.println("only t1");
 				t = t1;
 			} else {
@@ -107,7 +107,7 @@ public class Cylinder extends Surface {
 			outRecord.surface = this;
 			outRecord.t = t;
 
-			outRecord.normal.set(new Vector3(q.x, q.y, 0));
+			outRecord.normal.set(new Vector3(q.x, q.y, 0.0));
 			outRecord.normal.normalize();
 			outRecord.normal.scale(-1);
 
@@ -120,7 +120,7 @@ public class Cylinder extends Surface {
 	 * @see Object#toString()
 	 */
 	public String toString() {
-		return "Cone " + center + " " + radius + " " + height + " " + tipz
-				+ " " + shader + " end";
+		return "Cylinder " + center + " " + radius + " " + height + " "
+				+ shader + " end";
 	}
 }
