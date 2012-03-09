@@ -59,17 +59,16 @@ public class Phong extends Shader {
 			lV.normalize();
 			h.add(toEye, lV);
 			h.normalize();
-
-			// Lambertian Component
-			r += (kd.r * l.intensity.r * Math.max(0,lV.dot(n)));
-			g += (kd.g * l.intensity.g * Math.max(0,lV.dot(n)));
-			b += (kd.b * l.intensity.b * Math.max(0,lV.dot(n)));
-			// Phong Component
-			r += (ks.r * l.intensity.r * Math.pow(Math.max(0, n.dot(h)),exponent));
-			g += (ks.g * l.intensity.g * Math.pow(Math.max(0, n.dot(h)),exponent));
-			b += (ks.b * l.intensity.b * Math.pow(Math.max(0, n.dot(h)),exponent));
-			
-
+			if(!isShadowed(scene, l, record)) {
+				// Lambertian Component
+				r += (kd.r * l.intensity.r * Math.max(0,lV.dot(n)));
+				g += (kd.g * l.intensity.g * Math.max(0,lV.dot(n)));
+				b += (kd.b * l.intensity.b * Math.max(0,lV.dot(n)));
+				// Phong Component
+				r += (ks.r * l.intensity.r * Math.pow(Math.max(0, n.dot(h)),exponent));
+				g += (ks.g * l.intensity.g * Math.pow(Math.max(0, n.dot(h)),exponent));
+				b += (ks.b * l.intensity.b * Math.pow(Math.max(0, n.dot(h)),exponent));
+			}
 		}
 		outColor.set(r, g, b);
 	}

@@ -45,11 +45,12 @@ public class Lambertian extends Shader {
 
 			lV.sub(record.location, l.position);
 			lV.normalize();
-			// Add light intensities to each component.
-			r += (kd.r * l.intensity.r * lV.dot(n));
-			g += (kd.g * l.intensity.g * lV.dot(n));
-			b += (kd.b * l.intensity.b * lV.dot(n));
-
+			if(!isShadowed(scene, l, record)) {
+				// Add light intensities to each component.
+				r += (kd.r * l.intensity.r * lV.dot(n));
+				g += (kd.g * l.intensity.g * lV.dot(n));
+				b += (kd.b * l.intensity.b * lV.dot(n));
+			}
 		}
 		outColor.set(r, g, b);
 

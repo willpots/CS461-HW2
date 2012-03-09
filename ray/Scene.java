@@ -72,7 +72,7 @@ public class Scene {
 	 * @param outRecord the output IntersectionRecord
 	 * @param ray the ray to intersect
 	 * @param anyIntersection if true, will immediately return when found an intersection, and won't modify outRecord
-	 * @return true if and intersection is found.
+	 * @return true if an intersection is found.
 	 */
 	public boolean intersect(IntersectionRecord outRecord, Ray rayIn, boolean anyIntersection) {
 		
@@ -81,23 +81,25 @@ public class Scene {
 		Ray ray = new Ray(rayIn.origin, rayIn.direction);
 		ray.start = rayIn.start;
 		ray.end = rayIn.end;
-		IntersectionRecord tRec = new IntersectionRecord();
-		tRec.t=Double.POSITIVE_INFINITY;
+		double t=Double.POSITIVE_INFINITY;
+	
 		for(Iterator<Surface> iter = surfaces.iterator(); iter.hasNext();) {
 			Surface s = iter.next();
 			if(s.intersect(tmp, ray)) {
-				if(anyIntersection) return true;
-				else {
-					ret=true;
-					rayIn.set(ray.origin, ray.direction);
-					rayIn.start=ray.start;
-					rayIn.end=ray.end;
-					if(tmp.t<tRec.t) tRec.set(tmp);	
+				ret=true;
+				rayIn.set(ray.origin, ray.direction);
+				rayIn.start=ray.start;
+				rayIn.end=ray.end;
+				if(anyIntersection) {
+					return ret;
+				} else {
+					if(tmp.t<t) {
+						t=tmp.t;
+						outRecord.set(tmp);	
+					}
 				}
 			}
 		}
-		if(ret) outRecord.set(tRec);
 		return ret;
 	}
-
 }

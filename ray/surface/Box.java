@@ -125,6 +125,8 @@ public class Box extends Surface {
 		}
 		// Set the location point.
 		rayIn.evaluate(outRecord.location, tNear);
+		rayIn.start=0;
+		rayIn.end=tNear;
 		outRecord.surface=this;
 		outRecord.t=tNear;
 		// Set the Normal Vector.

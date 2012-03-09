@@ -64,7 +64,6 @@ public class Sphere extends Surface {
 			// Calculate the outRecord
 			rayIn.evaluate(outRecord.location, t);
 			outRecord.surface = this;
-			// Normal = center-location (normalized)
 			outRecord.normal.set(new Vector3());
 			outRecord.normal.sub(center,outRecord.location);
 			outRecord.normal.normalize();

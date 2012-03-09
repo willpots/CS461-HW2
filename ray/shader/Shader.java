@@ -41,8 +41,18 @@ public abstract class Shader {
 	 */
 	protected boolean isShadowed(Scene scene, Light light, IntersectionRecord record) {
 		
-		// TODO (soon): fill in this function
-
+		Point3 p = new Point3(record.location);
+		Vector3 lV = new Vector3();
+		lV.sub(record.location, light.position);
+		lV.normalize();
+		Ray r = new Ray(p,lV);
+		r.start=Ray.EPSILON;
+		r.end=Double.POSITIVE_INFINITY;
+		r.makeOffsetRay();
+		IntersectionRecord tmp = new IntersectionRecord();
+		if(scene.intersect(tmp,r,true)) {
+			if(r.end<tmp.t) return true;
+		}
 		return false;
 	}
 }
