@@ -53,6 +53,7 @@ public abstract class Shader {
 		Vector3 lV = new Vector3();
 		lV.sub(light.position, record.location);
 		lV.normalize();
+<<<<<<< HEAD
 		// comment out the next line for negative shadows.  possible progress?
 		lV.scale(-1);
 
@@ -60,6 +61,12 @@ public abstract class Shader {
 
 		r.start = Ray.EPSILON;
 		r.end = Double.POSITIVE_INFINITY;
+=======
+		Ray r = new Ray(p,lV);
+		r.start=Ray.EPSILON;
+		r.start=.001;
+		r.end=Double.POSITIVE_INFINITY;
+>>>>>>> Committed working cylinders
 		r.makeOffsetRay();
 
 		IntersectionRecord tmp = new IntersectionRecord();

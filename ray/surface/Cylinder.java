@@ -71,12 +71,19 @@ public class Cylinder extends Surface {
 
 			double t = 0.0;
 
+			double tc0 = ((c.z+(H/2))-p.z)/d.z;
+			double tc1 = ((c.z+(H/2))-p.z)/d.z;
 			Point3 q0 = new Point3();
 			Point3 q1 = new Point3();
-
+			Point3 qc0 = new Point3();
+			Point3 qc1 = new Point3();
+			
 			rayIn.evaluate(q0, t0);
 			rayIn.evaluate(q1, t1);
-
+			rayIn.evaluate(qc0, tc0);
+			rayIn.evaluate(qc1, tc1);
+			boolean a0 = Math.pow(qc0.x+c.x, 2)+Math.pow(qc0.y+c.y, 2)<=Math.pow(radius, 2);
+			boolean a1 = Math.pow(qc1.x-c.x, 2)+Math.pow(qc1.y-c.y, 2)<=Math.pow(radius, 2);
 			if ((q0.z >= c.z - H / 2 && q0.z <= c.z + H / 2)
 					&& (q1.z >= c.z - H / 2 && q1.z <= c.z + H / 2)) {
 				if (t0 < t1) {
@@ -86,6 +93,10 @@ public class Cylinder extends Surface {
 					// System.out.println("both t1");
 					t = t1;
 				}
+			} else if (a0&&tc0<t0&&tc0<t1) {
+				t=tc0;
+			} else if (a1&&tc1<t0&&tc1<t1) {
+				t=tc1;
 			} else if ((q0.z >= c.z - H / 2 && q0.z <= c.z + H / 2)
 					&& !(q1.z >= c.z - H / 2 & q1.z <= c.z + H / 2)) {
 				// System.out.println("only t0");
@@ -93,7 +104,7 @@ public class Cylinder extends Surface {
 			} else if (!(q0.z >= c.z - H / 2 && q0.z <= c.z + H / 2)
 					&& (q1.z >= c.z - H / 2 && q1.z <= c.z + H / 2)) {
 				// System.out.println("only t1");
-				t = t1;
+				t=t1;
 			} else {
 				// System.out.println("none");
 				return false;
@@ -106,10 +117,15 @@ public class Cylinder extends Surface {
 			outRecord.location.set(q);
 			outRecord.surface = this;
 			outRecord.t = t;
-
-			outRecord.normal.set(new Vector3(q.x-c.x, q.y-c.y, 0));
+			if(a0) {
+				outRecord.normal.set(new Vector3(0,0,1));
+			} else if(a1) {
+				outRecord.normal.set(new Vector3(0,0,-1));
+			} else {
+				outRecord.normal.set(new Vector3(q.x-c.x, q.y-c.y, 0));
+				outRecord.normal.scale(-1);
+			}
 			outRecord.normal.normalize();
-			outRecord.normal.scale(-1);
 
 			return true;
 		}

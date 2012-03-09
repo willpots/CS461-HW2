@@ -49,3 +49,5 @@ ray/surface/Cylinder.class
 ray/Camera.class
 
 ray/surface/Cylinder.class
+
+ray/shader/Shader.class
