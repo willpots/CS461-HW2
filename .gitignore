@@ -23,3 +23,17 @@ ray/shader/Shader.class
 ray/surface/Box.class
 
 ray/surface/Sphere.class
+
+ray/shader/Lambertian.class
+
+ray/shader/Phong.class
+
+ray/shader/Shader.class
+
+ray/surface/Box.class
+
+ray/surface/Cylinder.class
+
+ray/surface/Sphere.class
+
+ray/Scene.class
