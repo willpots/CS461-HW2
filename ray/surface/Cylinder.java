@@ -117,7 +117,7 @@ public class Cylinder extends Surface {
 			outRecord.location.set(q);
 			outRecord.surface = this;
 			outRecord.t = t;
-			if(a0) {
+			if(a0) { 
 				outRecord.normal.set(new Vector3(0,0,1));
 			} else if(a1) {
 				outRecord.normal.set(new Vector3(0,0,-1));
