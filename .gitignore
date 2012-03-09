@@ -11,3 +11,15 @@ ray/IntersectionRecord.class
 ray/shader/Phong.class
 
 ray/shader/Phong.class
+
+ray/shader/Lambertian.class
+
+ray/Scene.class
+
+ray/shader/Phong.class
+
+ray/shader/Shader.class
+
+ray/surface/Box.class
+
+ray/surface/Sphere.class
