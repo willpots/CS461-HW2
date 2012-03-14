@@ -10,27 +10,17 @@ public class Cylinder extends Surface {
 
 	/** The center of the cylinder */
 	protected final Point3 center = new Point3();
-
-	public void setCenter(Point3 center) {
-		this.center.set(center);
-	}
+	public void setCenter(Point3 center) {this.center.set(center);}
 
 	/** The radius of the cylinder. */
 	protected double radius = 1.0;
-
-	public void setRadius(double radius) {
-		this.radius = radius;
-	}
-
+	public void setRadius(double radius) {this.radius = radius;}
 	/**
 	 * The height of the cylinder in the z-direction. The cylinder extends from
 	 * center.z - height/2 to center.z + height/2
 	 */
 	protected double height = 1.0;
-
-	public void setHeight(double height) {
-		this.height = height;
-	}
+	public void setHeight(double height) {this.height = height;}
 
 	public Cylinder() {}
 

@@ -29,8 +29,8 @@ public class Cone extends Surface {
 	public Cone() { }
 
 	/**
-	 * Tests this surface for intersection witheightray. If an intersection is found
-	 * record is filled out witheightthe information about the intersection and the
+	 * Tests this surface for intersection with ray. If an intersection is found
+	 * record is filled out with the information about the intersection and the
 	 * method returns true. It returns false otherwise and the information in
 	 * outRecord is not modified.
 	 *
@@ -42,12 +42,12 @@ public class Cone extends Surface {
 		
 		Point3 e = new Point3(rayIn.origin);
 		Vector3 d = new Vector3(rayIn.direction);
-		Point3 p = new Point3(e.x-center.x, e.y-center.y, e.z-center.z);
 		Point3 c = new Point3(center);
-		double h = height;
+		Point3 p = new Point3(e.x-c.x, e.y-c.y, e.z-c.z);
+		double h = tipz-c.z;
 		double r = radius;
 		
-		double s = Math.pow(radius, 2)/Math.pow(height, 2);
+		double s = Math.pow(r, 2)/Math.pow(h, 2);
 		
 		double A = Math.pow(d.x, 2) + Math.pow(d.y, 2) - (s*Math.pow(d.z, 2));
 		double B = 2 * (p.x*d.x + p.y*d.y - s*(p.z-h)*d.z);
@@ -62,8 +62,8 @@ public class Cone extends Surface {
 			double t1 = ((-B) - Math.sqrt(discriminant)) / 	(2 * A);
 			double t = 0.0;
 
-			double tc0 = ((c.z+(h/2))-p.z)/d.z;
-			double tc1 = ((c.z+(h/2))-p.z)/d.z;
+			double tc0 = ((c.z+(height/2))-e.z)/d.z;
+			double tc1 = ((c.z-(height/2))-e.z)/d.z;
 
 			Point3 q0 = new Point3();
 			Point3 q1 = new Point3();
@@ -75,10 +75,11 @@ public class Cone extends Surface {
 			rayIn.evaluate(qc0, tc0);
 			rayIn.evaluate(qc1, tc1);
 			
-			boolean cond0 = (q0.z >= c.z - h/2 && q0.z <= c.z + h/2);
-			boolean cond1 = (q1.z >= c.z - h/2 && q1.z <= c.z + h/2);
-			boolean a0 = Math.pow(qc0.x+c.x, 2)+Math.pow(qc0.y+c.y, 2)<=Math.pow(radius, 2);
-			boolean a1 = Math.pow(qc1.x-c.x, 2)+Math.pow(qc1.y-c.y, 2)<=Math.pow(radius, 2);
+			boolean cond0 = (q0.z >= c.z - height/2 && q0.z <= c.z + height/2);
+			boolean cond1 = (q1.z >= c.z - height/2 && q1.z <= c.z + height/2);
+			
+			boolean a0 = Math.pow(qc0.x+c.x, 2)+Math.pow(qc0.y+c.y, 2)<=Math.pow(r, 2);
+			boolean a1 = Math.pow(qc1.x-c.x, 2)+Math.pow(qc1.y-c.y, 2)<=Math.pow(r, 2);
 
 			if (cond0 && cond1) {
 				if (t0 < t1) {
@@ -99,10 +100,11 @@ public class Cone extends Surface {
 			}
 			Point3 q = new Point3();
 			rayIn.evaluate(q, t);
+			double rad = (-radius/h) * (q.z - h);
+			outRecord.location.set(q);
 			q.x -= c.x;
 			q.y -= c.y;
-			q.z = (r/h);
-			outRecord.location.set(q);
+			q.z = (rad/h);
 			outRecord.surface = this;
 			outRecord.t = t;
 			if(a0) {
@@ -111,7 +113,7 @@ public class Cone extends Surface {
 				outRecord.normal.set(new Vector3(0,0,1));				
 			} else {
 				outRecord.normal.set(q);
-				outRecord.normal.scale(1);
+				outRecord.normal.scale(-1);
 			}
 			outRecord.normal.normalize();
 
