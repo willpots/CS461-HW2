@@ -32,8 +32,7 @@ public class Cylinder extends Surface {
 		this.height = height;
 	}
 
-	public Cylinder() {
-	}
+	public Cylinder() {}
 
 	/**
 	 * Tests this surface for intersection with ray. If an intersection is found
@@ -68,7 +67,6 @@ public class Cylinder extends Surface {
 
 			double t0 = ((-B) + Math.sqrt(discriminant)) / (2 * A);
 			double t1 = ((-B) - Math.sqrt(discriminant)) / (2 * A);
-
 			double t = 0.0;
 
 			double tc0 = ((c.z+(H/2))-p.z)/d.z;
