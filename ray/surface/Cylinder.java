@@ -3,7 +3,6 @@ package ray.surface;
 import ray.IntersectionRecord;
 import ray.Ray;
 import ray.math.Point3;
-//import ray.math.Vector3;
 import ray.math.Vector3;
 
 public class Cylinder extends Surface {
