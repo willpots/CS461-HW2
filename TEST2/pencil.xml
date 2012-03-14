@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  A pencil floating in space.
+
+Note to Will:
+As you can see, this looks like a Dixon Tichonderoga pencil.
+We need two cones to make the tan wood part before the tip
+and then the actual black tip, but otherwise the only other
+thing I might add is a bunch of tiny green spheres forming
+the shape of a "2" near the eraser (can also be done with blocks).
+
+Lastly, we can try and arrange multiple pencils somehow, or just
+add tons of spheres to make it render more slowly (adding another
+pencil added ~2 seconds.  I have 9 lights right now just to make
+it render more slowly and generally just make it interesting.
+
+Lastly, remember that the Z direction is up (I did this because
+using X or Y as up stretches things weirdly and it doesn't look
+as good at the low resolution (800x600) we're using.  Any ideas for
+what to do to make it better/render longer?  Keep in mind we can't
+use boxes or they look really messed up.  Not sure if we'll lose points
+for a lack of boxes.
+ -->
+ 
+<scene>
+
+  <camera>
+    <viewPoint>20 5 10</viewPoint>
+    <viewDir>-4 -1 -2</viewDir>
+    <projNormal>4 1 2</projNormal>
+    <viewUp>0 0 1</viewUp>
+    <projDistance>4</projDistance>
+    <viewWidth>2.5</viewWidth>
+    <viewHeight>2.5</viewHeight>
+  </camera>
+  
+  <image>
+   	800 600 
+  </image>
+  
+  
+  
+  
+  
+  <shader name="yellow" type="Phong">
+    <diffuseColor>0.3 0.3 0</diffuseColor>
+    <specularColor>0.5 0.5 0</specularColor>
+    <exponent>20</exponent>
+  </shader>
+  
+  <shader name="gray" type="Phong">
+    <diffuseColor>0.01 0.01 0.01</diffuseColor>
+    <specularColor>0.2 0.2 0.2</specularColor>
+    <exponent>10</exponent>
+  </shader> 
+  
+  <shader name="black" type="Lambertian">
+    <diffuseColor>0 0 0</diffuseColor>
+  </shader>
+  
+  <shader name="green" type="Phong">
+    <diffuseColor>0.05 0.20 0.05</diffuseColor>
+    <specularColor>0.05 0.15 0.05</specularColor>
+    <exponent>1000</exponent>
+  </shader>  
+  
+  <shader name="pink" type="Lambertian">
+    <diffuseColor>1 0.4 0.9</diffuseColor>
+  </shader>
+  
+  
+
+<!-- Pencil -->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 1 3.1</center>
+    <radius>0.05</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 1 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 1 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+
+<!-- Pencil -->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 3 3.1</center>
+    <radius>0.05</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 3 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 3 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+  
+  
+  
+  <surface type="Sphere">
+    <shader ref="gray" />
+    <radius>100</radius>
+    <center>-100 0 -150</center>
+  </surface>
+ 
+ 
+ 
+ 
+  <light>
+    <position>-100 50 -300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  
+  <light>
+    <position>-100 75 -300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+
+  <light>
+    <position>-100 100 -300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+
+  <light>
+    <position>-100 -50 300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  
+  <light>
+    <position>-100 -75 300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+
+  <light>
+    <position>-100 -100 300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  
+  <light>
+    <position>100 -50 300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  
+  <light>
+    <position>100 -75 300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+
+  <light>
+    <position>100 -100 300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  
+  <light>
+    <position>100 50 300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  
+  <light>
+    <position>100 75 300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+
+  <light>
+    <position>100 100 300</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  
+  <light>
+    <position>10 10 10</position>
+    <intensity>1 1 1</intensity>
+  </light>
+  
+</scene>
