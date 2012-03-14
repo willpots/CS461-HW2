@@ -24,13 +24,13 @@ for a lack of boxes.
 <scene>
 
   <camera>
-    <viewPoint>20 5 10</viewPoint>
+    <viewPoint>20 6 12</viewPoint>
     <viewDir>-4 -1 -2</viewDir>
     <projNormal>4 1 2</projNormal>
     <viewUp>0 0 1</viewUp>
     <projDistance>4</projDistance>
-    <viewWidth>2.5</viewWidth>
-    <viewHeight>2.5</viewHeight>
+    <viewWidth>2.3</viewWidth>
+    <viewHeight>2.3</viewHeight>
   </camera>
   
   <image>
@@ -67,9 +67,864 @@ for a lack of boxes.
     <diffuseColor>1 0.4 0.9</diffuseColor>
   </shader>
   
+  <shader name="tan" type="Lambertian">
+    <diffuseColor>0.6 0.5 0.3</diffuseColor>
+  </shader>
+  
+  
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@--> 
+<!-- MIDDLE ROW MIDDLE ROW MIDDLE ROW MIDDLE-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->  
+<!-- Pencil 0 -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 0 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 0 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 0 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 0 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+ 
+<!-- Pencil 0.5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 0.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 0.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 0.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 0.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -0.5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -0.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -0.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -0.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -0.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -0.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -0.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -0.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+
+  
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->  
   
 
-<!-- Pencil -->
+<!-- Pencil -1y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -1 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -1 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -1 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -1 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -2y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -1.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -1.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -1.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -1.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -3y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -2 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -2 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -2 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -2 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -4y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -2.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -2.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -2.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -2.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>      
+  
+<!-- Pencil -5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -3 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -3 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -3 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -3 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+<!-- Pencil -6y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -3.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -3.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -3.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -3.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+ <!-- Pencil -7y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -4 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -4 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -4 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -4 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil -8y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -4.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -4.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -4.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -4.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil -9y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil -10y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -5.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -5.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -5.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -5.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+
+ <!-- Pencil -11y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -6 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -6 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -6 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -6 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil -12y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -6.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -6.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -6.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -6.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil -13y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -7 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -7 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -7 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -7 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -7 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -7 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -7 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<!-- Pencil 1y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 1 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
   <surface type="Cylinder">
     <shader ref="yellow" />
     <center>1 1 3</center>
@@ -81,7 +936,7 @@ for a lack of boxes.
     <shader ref="black" />
     <center>1 1 3.1</center>
     <radius>0.05</radius>
-	<height>5.5</height>
+	<height>5.35</height>
   </surface>
   
   <surface type="Cylinder">
@@ -112,8 +967,172 @@ for a lack of boxes.
 	<height>0.5</height>
   </surface>
   
+<!-- Pencil 2y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 1.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 1.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 1.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
 
-<!-- Pencil -->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 1.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil 3y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 2 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 2 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 2 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 2 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil 4y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 2.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 2.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 2.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 2.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>      
+  
+<!-- Pencil 5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 3 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
   <surface type="Cylinder">
     <shader ref="yellow" />
     <center>1 3 3</center>
@@ -125,7 +1144,7 @@ for a lack of boxes.
     <shader ref="black" />
     <center>1 3 3.1</center>
     <radius>0.05</radius>
-	<height>5.5</height>
+	<height>5.35</height>
   </surface>
   
   <surface type="Cylinder">
@@ -154,17 +1173,3779 @@ for a lack of boxes.
     <center>1 3 -0.65</center>
     <radius>0.21</radius>
 	<height>0.5</height>
+  </surface>  
+  
+<!-- Pencil 6y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 3.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
   </surface>
   
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 3.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 3.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 3.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+ <!-- Pencil 7y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 4 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 4 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 4 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 4 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 8y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 4.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 4.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 4.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 4.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 9y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil 10y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 5.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 5.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 5.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 5.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+<!-- Pencil 11y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 6 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 6 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 6 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 6 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+ <!-- Pencil 12y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 6.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 6.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 6.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 6.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 13y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 7 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 7 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 7 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 7 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 14y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 7.5 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7.5 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 7.5 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 7.5 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7.5 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7.5 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 7.5 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil 15y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 8 5.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 8 3</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 8 3.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 8 0</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 8 -0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 8 0.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 8 -0.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>    
   
   
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->  
+<!-- TOP ROW TOP ROW TOP ROW TOP ROW TOP ROW-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->  
+<!-- Pencil 0 -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 0 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
   
-  <surface type="Sphere">
-    <shader ref="gray" />
-    <radius>100</radius>
-    <center>-100 0 -150</center>
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 0 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 0 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 0 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
   </surface>
  
+<!-- Pencil 0.5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 0.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 0.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 0.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 0.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -0.5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -0.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -0.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -0.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -0.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -0.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -0.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -0.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+
+  
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->  
+  
+
+<!-- Pencil -1y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -1 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -1 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -1 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -1 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -2y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -1.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -1.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -1.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -1.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -3y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -2 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -2 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -2 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -2 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -4y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -2.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -2.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -2.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -2.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>      
+  
+<!-- Pencil -5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -3 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -3 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -3 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -3 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+<!-- Pencil -6y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -3.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -3.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -3.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -3.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+ <!-- Pencil -7y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -4 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -4 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -4 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -4 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil -8y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -4.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -4.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -4.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -4.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil -9y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil -10y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -5.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -5.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -5.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -5.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+
+ <!-- Pencil -11y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -6 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -6 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -6 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -6 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil -12y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -6.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -6.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -6.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -6.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil -13y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -7 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -7 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -7 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -7 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -7 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -7 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -7 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<!-- Pencil 1y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 1 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 1 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 1 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 1 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil 2y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 1.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 1.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 1.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 1.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil 3y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 2 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 2 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 2 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 2 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil 4y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 2.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 2.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 2.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 2.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>      
+  
+<!-- Pencil 5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 3 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 3 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 3 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 3 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+<!-- Pencil 6y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 3.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 3.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 3.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 3.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+ <!-- Pencil 7y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 4 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 4 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 4 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 4 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 8y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 4.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 4.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 4.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 4.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 9y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil 10y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 5.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 5.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 5.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 5.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+<!-- Pencil 11y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 6 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 6 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 6 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 6 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+ <!-- Pencil 12y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 6.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 6.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 6.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 6.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 13y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 7 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 7 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 7 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 7 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 14y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 7.5 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7.5 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 7.5 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 7.5 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7.5 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7.5 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 7.5 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil 15y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 8 12.10</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 8 10</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 8 10.1</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 8 7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 8 6.8</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 8 7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 8 6.35</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>    
+  
+  
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->  
+<!--BOTTOM ROW BOTTOM ROW BOTTOM ROW BOTTOM -->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->  
+<!-- Pencil 0 -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 0 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 0 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 0 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 0 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+ 
+<!-- Pencil 0.5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 0.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 0.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 0.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 0.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 0.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -0.5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -0.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -0.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -0.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -0.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -0.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -0.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -0.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+
+  
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->  
+  
+
+<!-- Pencil -1y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -1 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -1 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -1 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -1 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -2y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -1.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -1.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -1.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -1.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -1.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -3y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -2 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -2 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -2 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -2 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil -4y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -2.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -2.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -2.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -2.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -2.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>      
+  
+<!-- Pencil -5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -3 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -3 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -3 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -3 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+<!-- Pencil -6y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -3.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -3.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -3.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -3.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -3.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+ <!-- Pencil -7y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -4 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -4 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -4 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -4 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil -8y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -4.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -4.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -4.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -4.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -4.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil -9y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil -10y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -5.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -5.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -5.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -5.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -5.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+
+ <!-- Pencil -11y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -6 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -6 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -6 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -6 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil -12y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -6.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -6.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -6.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -6.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -6.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil -13y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 -7 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -7 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 -7 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 -7 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -7 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 -7 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 -7 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<!-- Pencil 1y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 1 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 1 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 1 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 1 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil 2y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 1.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 1.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 1.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 1.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 1.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil 3y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 2 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 2 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 2 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 2 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>
+  
+<!-- Pencil 4y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 2.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 2.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 2.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 2.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 2.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>      
+  
+<!-- Pencil 5y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 3 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 3 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 3 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 3 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+<!-- Pencil 6y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 3.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 3.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 3.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 3.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 3.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+ <!-- Pencil 7y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 4 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 4 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 4 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 4 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 8y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 4.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 4.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 4.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 4.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 4.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 9y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil 10y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 5.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 5.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 5.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 5.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 5.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+<!-- Pencil 11y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 6 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 6 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 6 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 6 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>  
+  
+ <!-- Pencil 12y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 6.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 6.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 6.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 6.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 6.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 13y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 7 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 7 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 7 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 7 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface> 
+  
+ <!-- Pencil 14y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 7.5 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7.5 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 7.5 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 7.5 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 7.5 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 7.5 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>   
+  
+ <!-- Pencil 15y -->
+<!--
+  <surface type="Cone">
+    <shader ref="green" />
+    <center>1 8 -2.9</center>
+    <tipz>-1</tipz>
+    <radius>0.2</radius>
+    <height>0.5</height>
+  </surface>
+-->
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 8 -4</center>
+    <radius>0.2</radius>
+	<height>5.5</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="black" />
+    <center>1 8 -3.9</center>
+    <radius>0.05</radius>
+	<height>5.35</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="green" />
+    <center>1 8 -7</center>
+    <radius>0.22</radius>
+	<height>0.85</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 8 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+
+  <surface type="Cylinder">
+    <shader ref="yellow" />
+    <center>1 8 -7.2</center>
+    <radius>0.222</radius>
+	<height>0.1</height>
+  </surface>
+  
+  <surface type="Cylinder">
+    <shader ref="pink" />
+    <center>1 8 -7.65</center>
+    <radius>0.21</radius>
+	<height>0.5</height>
+  </surface>    
+  
+  
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->  
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->   
  
  
  
@@ -229,7 +5010,7 @@ for a lack of boxes.
   </light>
   
   <light>
-    <position>10 10 10</position>
+    <position>4 0 10</position>
     <intensity>1 1 1</intensity>
   </light>
   
